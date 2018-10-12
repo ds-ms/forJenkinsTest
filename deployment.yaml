@@ -5,8 +5,6 @@ metadata:
   labels:
     app: sample-app
     chart: sample-app-0.1.0
-    release: RELEASE-NAME
-    heritage: Tiller
 spec:
   type: ClusterIP
   ports:
@@ -30,12 +28,10 @@ spec:
   selector:
     matchLabels:
       app: sample-app
-      release: RELEASE-NAME
   template:
     metadata:
       labels:
         app: sample-app
-        release: RELEASE-NAME
     spec:
       containers:
         - name: sample-app
